@@ -1,0 +1,5 @@
+{% extends "base.html" %}{% block content %}
+<div class="card"><h1>Authentication Toolkit</h1>
+<p>A small educational demo of secure registration, login and sessions.</p>
+<p>{% if session.get('user_id') %}You are logged in. <a href="{{ url_for('dashboard') }}">Go to dashboard</a>.{% else %}<a href="{{ url_for('register') }}">Create an account</a> or <a href="{{ url_for('login') }}">log in</a>.{% endif %}</p></div>
+{% endblock %}
